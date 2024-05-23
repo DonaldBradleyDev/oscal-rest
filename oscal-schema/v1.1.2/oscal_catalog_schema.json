@@ -9,7 +9,7 @@
     "description" : "A JSON Schema directive to bind a specific schema to its document instance.",
     "$id" : "#json-schema-directive",
     "$ref" : "#/definitions/URIReferenceDatatype" },
-   "oscal-catalog-oscal-catalog:catalog" : 
+   "oscal_catalog_oscal_catalog:catalog" : 
    { "title" : "Catalog",
     "description" : "A structured, organized collection of control information.",
     "$id" : "#assembly_oscal-catalog_catalog",
