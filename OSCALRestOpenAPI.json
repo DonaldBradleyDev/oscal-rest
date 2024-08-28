@@ -1,5 +1,5 @@
 {
-  "openapi": "3.1.0",
+  "openapi": "3.0.1",
   "info": {
     "title": "OSCAL REST",
     "description": "This is an open-source REST API specification for exchanging [OSCAL](https://pages.nist.gov/OSCAL/) content between tools and organizations.\n\nThe _OSCAL REST OpenAPI Specification_ addresses OSCAL XML, JSON and YAML content for all seven OSCAL models. Each OSCAL model has a primary set of REST API methods and endpoints for the OSCAL content itself, as well as methods and endpoints for snapshots and attachments. OSCAL profiles also have methods and endpoints for live profile resolution and snapshots of resolved profiles.\n\nFor an overview and more information, visit [https://docs.oscal.io/docs/oscal-rest-openapi](https://docs.oscal.io/docs/oscal-rest-openapi)\n\n---\n\n**Known-Issue: OSCAL XML Representation**\n\nThere is a [known-issue](https://github.com/OAI/OpenAPI-Specification/issues/630) that prevents proper expression of OSCAL XML in OpenAPI.\n\nWhen the specification calls for OSCAL content to be accepted or returned, the content must be fully OSCAL valid. Even if the specification shows a non-compliant schema or example.",
@@ -26,6 +26,7 @@
   "tags": [
     {
       "name": "OSCAL Catalog",
+      "description": "Information about the OSCAL Catalog Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/control/catalog/"
@@ -33,6 +34,7 @@
     },
     {
       "name": "OSCAL Profile",
+      "description": "Information about the OSCAL Profile Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/control/profile/"
@@ -40,6 +42,7 @@
     },
     {
       "name": "OSCAL System Security Plan",
+      "description": "Information about the OSCAL SSP Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/implementation/ssp/"
@@ -47,6 +50,7 @@
     },
     {
       "name": "OSCAL Component Definition",
+      "description": "Information about the OSCAL Component Definition Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/implementation/component-definition/"
@@ -54,6 +58,7 @@
     },
     {
       "name": "OSCAL Plan of Action and Milestones",
+      "description": "Information about the OSCAL POA&M Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/assessment/poam/"
@@ -61,6 +66,7 @@
     },
     {
       "name": "OSCAL Assessment Plan",
+      "description": "Information about the OSCAL Assessment Plan Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/assessment/assessment-plan/"
@@ -68,6 +74,7 @@
     },
     {
       "name": "OSCAL Assessment Results",
+      "description": "Information about the OSCAL Assessment Results Model.",
       "externalDocs": {
         "description": "Find out more",
         "url": "https://pages.nist.gov/OSCAL/concepts/layer/assessment/assessment-results/"
@@ -298,7 +305,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -396,7 +403,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -529,7 +536,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -613,7 +620,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -701,7 +708,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -822,7 +829,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -940,7 +947,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -1061,7 +1068,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -1154,7 +1161,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -1251,7 +1258,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -1383,7 +1390,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -1471,7 +1478,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -1601,7 +1608,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -1717,7 +1724,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -1847,7 +1854,7 @@
             "description": "ID of AssessmentPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -2148,7 +2155,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -2246,7 +2253,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -2379,7 +2386,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -2463,7 +2470,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -2563,7 +2570,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -2651,7 +2658,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -2772,7 +2779,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -2890,7 +2897,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3011,7 +3018,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3104,7 +3111,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3201,7 +3208,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3333,7 +3340,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -3421,7 +3428,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -3551,7 +3558,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3658,7 +3665,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3788,7 +3795,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -3881,7 +3888,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -3969,7 +3976,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -4099,7 +4106,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -4206,7 +4213,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -4336,7 +4343,7 @@
             "description": "ID of Profile",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -4637,7 +4644,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -4735,7 +4742,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -4868,7 +4875,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -4952,7 +4959,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -5040,7 +5047,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -5161,7 +5168,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -5279,7 +5286,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -5400,7 +5407,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -5493,7 +5500,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -5590,7 +5597,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -5722,7 +5729,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -5810,7 +5817,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -5940,7 +5947,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -6047,7 +6054,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -6177,7 +6184,7 @@
             "description": "ID of AssessmentResults",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -6478,7 +6485,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -6576,7 +6583,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -6709,7 +6716,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -6793,7 +6800,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -6881,7 +6888,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -7002,7 +7009,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -7120,7 +7127,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -7241,7 +7248,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -7334,7 +7341,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -7431,7 +7438,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -7563,7 +7570,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -7651,7 +7658,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -7781,7 +7788,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -7888,7 +7895,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -8018,7 +8025,7 @@
             "description": "ID of Catalog",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -8319,7 +8326,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -8417,7 +8424,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -8550,7 +8557,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -8634,7 +8641,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -8722,7 +8729,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -8843,7 +8850,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -8961,7 +8968,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -9082,7 +9089,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -9175,7 +9182,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -9272,7 +9279,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -9404,7 +9411,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -9492,7 +9499,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -9622,7 +9629,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -9729,7 +9736,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -9859,7 +9866,7 @@
             "description": "ID of SystemSecurityPlan",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -10160,7 +10167,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -10258,7 +10265,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -10391,7 +10398,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -10475,7 +10482,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -10563,7 +10570,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -10684,7 +10691,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -10802,7 +10809,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -10923,7 +10930,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -11016,7 +11023,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -11113,7 +11120,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -11245,7 +11252,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -11333,7 +11340,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -11463,7 +11470,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -11570,7 +11577,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -11700,7 +11707,7 @@
             "description": "ID of PlanOfActionAndMilestones",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -12001,7 +12008,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -12099,7 +12106,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -12232,7 +12239,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -12316,7 +12323,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -12404,7 +12411,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -12525,7 +12532,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -12643,7 +12650,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -12764,7 +12771,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -12857,7 +12864,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -12954,7 +12961,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -13086,7 +13093,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -13174,7 +13181,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           }
         ],
@@ -13304,7 +13311,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -13411,7 +13418,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -13541,7 +13548,7 @@
             "description": "ID of ComponentDefinition",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/DocId"
+              "$ref": "#/components/schemas/ContentUUID"
             }
           },
           {
@@ -13766,15 +13773,6 @@
           }
         }
       },
-      "OSCALProfileEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "profile-list"
-        }
-      },
       "OSCALCatalogEntry": {
         "type": "object",
         "properties": {
@@ -13784,15 +13782,6 @@
               "$ref": "#/components/schemas/OSCALModelEntry"
             }
           }
-        }
-      },
-      "OSCALCatalogEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "catalog-list"
         }
       },
       "OSCALSystemSecurityPlanEntry": {
@@ -13806,15 +13795,6 @@
           }
         }
       },
-      "OSCALSystemSecurityPlanEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "system-security-plan-list"
-        }
-      },
       "OSCALComponentDefinitionEntry": {
         "type": "object",
         "properties": {
@@ -13824,15 +13804,6 @@
               "$ref": "#/components/schemas/OSCALModelEntry"
             }
           }
-        }
-      },
-      "OSCALComponentDefinitionEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "component-definition-list"
         }
       },
       "OSCALAssessmentPlanEntry": {
@@ -13846,15 +13817,6 @@
           }
         }
       },
-      "OSCALAssessmentPlanEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "assessment-plan-list"
-        }
-      },
       "OSCALAssessmentResultsEntry": {
         "type": "object",
         "properties": {
@@ -13866,15 +13828,6 @@
           }
         }
       },
-      "OSCALAssessmentResultsEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "assessment-results-list"
-        }
-      },
       "OSCALPlanOfActionAndMilestonesEntry": {
         "type": "object",
         "properties": {
@@ -13884,15 +13837,6 @@
               "$ref": "#/components/schemas/OSCALModelEntry"
             }
           }
-        }
-      },
-      "OSCALPlanOfActionAndMilestonesEntryXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelEntry"
-        },
-        "xml": {
-          "name": "plan-of-action-and-milestones-list"
         }
       },
       "OSCALProfilesEntries": {
@@ -13983,15 +13927,6 @@
           }
         }
       },
-      "OSCALResolvedSnapshotsSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "resolved-snapshot-list"
-        }
-      },
       "OSCALCatalogsSnapshots": {
         "type": "object",
         "properties": {
@@ -14000,23 +13935,6 @@
             "items": {
               "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
             }
-          }
-        }
-      },
-      "OSCALCatalogsSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "catalog-snapshot-list"
-        }
-      },
-      "OSCALCatalogSnapshot": {
-        "type": "object",
-        "properties": {
-          "catalog-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
           }
         }
       },
@@ -14031,23 +13949,6 @@
           }
         }
       },
-      "OSCALProfilesSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "profile-snapshot-list"
-        }
-      },
-      "OSCALProfileSnapshot": {
-        "type": "object",
-        "properties": {
-          "profile-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-          }
-        }
-      },
       "OSCALSystemSecurityPlansSnapshots": {
         "type": "object",
         "properties": {
@@ -14057,15 +13958,6 @@
               "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
             }
           }
-        }
-      },
-      "OSCALSystemSecurityPlansSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "system-security-plan-snapshot-list"
         }
       },
       "OSCALAttachmentNoBase64": {
@@ -14290,29 +14182,6 @@
       "OSCALAttachment": {
         "$ref": "#/components/schemas/OSCALResource"
       },
-      "OSCALAttachment64": {
-        "type": "object",
-        "properties": {
-          "file": {
-            "properties": {
-              "resource-uuid": {
-                "type": "string",
-                "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-4[0-9A-Fa-f]{3}-[89ABab][0-9A-Fa-f]{3}-[0-9A-Fa-f]{12}$"
-              },
-              "name": {
-                "type": "string"
-              },
-              "media-type": {
-                "type": "string"
-              },
-              "attachment-binary": {
-                "type": "string",
-                "format": "binary"
-              }
-            }
-          }
-        }
-      },
       "OSCALModelSnapshotEntry": {
         "type": "object",
         "properties": {
@@ -14352,10 +14221,6 @@
           },
           "remarks": {
             "$ref": "https://raw.githubusercontent.com/EasyDynamics/OSCAL/json-schema-ref-by-path/json/schema/oscal_catalog_schema.json#/definitions/field_oscal-metadata_remarks"
-          },
-          "snapshot": {
-            "type": "object",
-            "ref$" : "#components/schemas/OSCALSnapshotAttributes"
           }
         }
       },
@@ -14427,14 +14292,6 @@
           }
         }
       },
-      "OSCALSystemSecurityPlanSnapshot": {
-        "type": "object",
-        "properties": {
-          "system-security-plan-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-          }
-        }
-      },
       "OSCALAssessmentPlansSnapshots": {
         "type": "object",
         "properties": {
@@ -14446,23 +14303,6 @@
           }
         }
       },
-      "OSCALAssessmentPlanSnapshot": {
-        "type": "object",
-        "properties": {
-          "assessment-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-          }
-        }
-      },
-      "OSCALAssessmentPlansSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "assessment-plan-snapshot-list"
-        }
-      },
       "OSCALComponentDefinitionsSnapshots": {
         "type": "object",
         "properties": {
@@ -14471,23 +14311,6 @@
             "items": {
               "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
             }
-          }
-        }
-      },
-      "OSCALComponentDefinitionsSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "component-definition-snapshot-list"
-        }
-      },
-      "OSCALComponentDefinitionSnapshot": {
-        "type": "object",
-        "properties": {
-          "component-definition-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
           }
         }
       },
@@ -14502,23 +14325,6 @@
           }
         }
       },
-      "OSCALAssessmentResultsListSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "assessment-results-snapshot-list"
-        }
-      },
-      "OSCALAssessmentResultsSnapshot": {
-        "type": "object",
-        "properties": {
-          "assessment-results-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-          }
-        }
-      },
       "OSCALPlanOfActionAndMilestonesListSnapshots": {
         "type": "object",
         "properties": {
@@ -14530,34 +14336,17 @@
           }
         }
       },
-      "OSCALPlanOfActionAndMilestonesListSnapshotsXML": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-        },
-        "xml": {
-          "name": "plan-of-action-and-milestones-list"
-        }
-      },
-      "OSCALPlanOfActionAndMilestonesSnapshot": {
-        "type": "object",
-        "properties": {
-          "plan-of-action-and-milestones-snapshot": {
-            "$ref": "#/components/schemas/OSCALModelSnapshotEntry"
-          }
-        }
-      },
       "Token": {
         "type": "string",
         "minLength": 1,
         "maxLength": 72,
         "pattern": "^(\\p{Ll}|_)(\\p{L}|\\p{N}|[.\\-_])*$"
       },
-      "DocId": {
+      "ContentUUID": {
         "type": "string",
-        "minLength": 1,
-        "maxLength": 72,
-        "pattern": "^(\\p{Ll}|_)(\\p{L}|\\p{N}|[.\\-_])*$"
+        "minLength": 36,
+        "maxLength": 36,
+        "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[45][0-9A-Fa-f]{3}-[89ABab][0-9A-Fa-f]{3}-[0-9A-Fa-f]{12}$"
       }
     },
     "securitySchemes": {
